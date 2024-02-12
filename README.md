@@ -5,4 +5,4 @@ GNNs ideally utilize subgraphs to predict labels when the graphs are unbiased, i
 
 
 <p align="center"><img src="image/CMIST.png" width=50% height=50%></p>
-<p align="center"><em>Figure 1.</em> The architecture of CIGA.</p>
+<p align="center"><em>Figure 1.</em> CMNIST-75sp Dataset.</p>
