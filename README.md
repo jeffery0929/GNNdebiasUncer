@@ -24,8 +24,7 @@ GNNs ideally utilize subgraphs to predict labels when the graphs are unbiased, i
 * RQ1: How is the quantitative comparison of the effectiveness of generated causal graphs across synthetic benchmark datasets for the end-task of graph classification?
 * RQ2: How is the quantitative comparison of the effectiveness of generated causal graphs across real-world benchmark datasets for the end-task of graph classification?
 * RQ3: How does the key component contribute to the end-task of graph classification?
-* RQ4: How is the quantitative comparison of the quality of generated causal graphs?
-* RQ5: How is the qualitative comparison of the quality of generated causal graphs?
+
 
 ### Datasets Information 
 
@@ -51,4 +50,11 @@ Analyzing Figure 6, we can observe that GAT achieves the best overall performanc
 <p align="center"><img src="image/realworld_dataset_ac.png" width=50% height=50%></p>
 <p align="center"><em>Figure 6.</em>  The ACC(%) of graph classification for real-world datasets. The best results are highlighted in bold.</p>
 
+### Ablation Studies (RQ3)
+**Setup.** As mentioned in section, we consider two uncertainty subgraphs sampling methods. The first method involves sampling the top 20% nodes with the highest attention scores to generate the uncertainty subgraph. The second method uses Locality Sensitive Hashing (LSH) to categorize nodes’ representations into six buckets and randomly sampls one node from each bucket.
+
+**Results.** In Figure 7 , when using the TopK uncertainty subgraph sampling method on the CMINST-75sp 0.8 dataset, the full model achieves an accuracy of 74.89%. Removing the label conformity (LC) component results in a drop in accuracy to 62.3%, indicating its importance in capturing local information. The removal of the uncertainty-aware classification (UC) component results in an accuracy of 65%, suggesting its significant contribution. The removal of both LC and UC causes a significant decline in accuracy to 53.07%, indicating their combined effect. For the COLLAB dataset, the full model achieves an accuracy of 72.26%. Removing LC decreases accuracy to 62.4%, while removing UC results in an accuracy of 68.8%. The removal of both components leads to an accuracy of 60.8%. Therefore, employing the Top-K uncertainty subgraph sampling method reveals that LC plays a more crucial role, as its exclusion causes the largest decline in accuracy. Moreover, removing both components leads to a maximum accuracy decline of 21.82%. In Figure 5.3(b), when using the LSH uncertainty subgraph selection method, the impact of the components is similar, except for the COLLAB dataset. For COLLAB, the full model achieves an accuracy of 74.26%. Removing the LC component leads to a slightly lower accuracy of 71.46%, while removing the UC component results in an accuracy of 69.33%. Removing both LC and UC together leads to an accuracy of 68.13%. The impact of UC is greater than that of LC. Overall, better results can be obtained with LSH on the COLLAB dataset, while TopK performs better on CMINST-75sp.
+
+<p align="center"><img src="image/RQ3.png" width=50% height=50%></p>
+<p align="center"><em>Figure 7.</em>  The comparison of different components in UACG with ACC(%). LC represents the label conformity component. UC represents the uncertainty-aware classification.</p>
 
