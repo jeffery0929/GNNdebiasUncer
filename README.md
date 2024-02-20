@@ -45,4 +45,10 @@ Analyzing Figure 5 , we observe that the performance gap is not significant for 
 <p align="center"><em>Figure 5.</em>  The ACC(%) of graph classification for synthetic datasets. The best results are highlighted in bold.</p>
 
 
+### Performance On Real-world Datasets (RQ2)
+Analyzing Figure 6, we can observe that GAT achieves the best overall performance for graph label predictions on the Graph-SST2 dataset, with an accuracy of 81.62%. Among the debias frameworks, UACG performs the best. Although the ACC results of GAT and UACG are similar, GAT exhibits smaller variance in its five results, indicating greater stability in this dataset. From the third column of Figure 6, we can see that UACG outperforms other methods and demonstrates higher stability compared to other models. However, DIR’s performance is not satisfactory, suggesting vulnerability to distribution shifts in certain datasets.
+
+<p align="center"><img src="image/realworld_dataset_ac.png" width=50% height=50%></p>
+<p align="center"><em>Figure 6.</em>  The ACC(%) of graph classification for real-world datasets. The best results are highlighted in bold.</p>
+
 
