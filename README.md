@@ -27,6 +27,11 @@ GNNs ideally utilize subgraphs to predict labels when the graphs are unbiased, i
 * RQ4: How is the quantitative comparison of the quality of generated causal graphs?
 * RQ5: How is the qualitative comparison of the quality of generated causal graphs?
 
+### Datasets Information 
+
+<p align="center"><img src="image/dataset_information1.png" width=50% height=50%></p>
+<p align="center"><em>Figure 2.</em>  The content of the causal and non-causal subgraphs in the synthetic dataset.</p>
+
 
 
 
