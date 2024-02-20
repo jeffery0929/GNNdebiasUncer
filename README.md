@@ -36,9 +36,13 @@ GNNs ideally utilize subgraphs to predict labels when the graphs are unbiased, i
 <p align="center"><em>Figure 3.</em>  The detail of synthetic datasets.</p>
 
 <p align="center"><img src="image/data3.png" width=50% height=50%></p>
-<p align="center"><em>Figure 3.</em>  Real-world Dataset.</p>
+<p align="center"><em>Figure 4.</em>  Real-world Dataset.</p>
 
 
+### Performance On Synthetic Datasets (RQ1)
+Analyzing Figure 5 , we observe that the performance gap is not significant for the Spurious-Motif dataset, except for DIR. The dataset’s composition may not be complex, resulting in good performance for most GNN models without debiasing, particularly GIN. Among the debiasing GNN frameworks, CAL performs the best, being unaffected by changes in the bias degree for this variant of the Spurious-Motif dataset. However, the performance of UACG, while not bad, requires further improvement. On the other hand, UACG outperforms other models significantly on the CMINST-75sp dataset, exhibiting a considerable performance gap. Nevertheless, there is a different phenomenon in DIR. Although its accuracy is the worst, its accuracy does not decrease with the increase of bias degree, and it seems most stable. 
+<p align="center"><img src="image/sy_dataset_accuracy.png" width=50% height=50%></p>
+<p align="center"><em>Figure 5.</em>  The ACC(%) of graph classification for synthetic datasets. The best results are highlighted in bold.</p>
 
 
 
