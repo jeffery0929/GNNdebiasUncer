@@ -29,8 +29,15 @@ GNNs ideally utilize subgraphs to predict labels when the graphs are unbiased, i
 
 ### Datasets Information 
 
-<p align="center"><img src="image/dataset_information1.png" width=50% height=50%></p>
+<p align="center"><img src="image/data1.png" width=50% height=50%></p>
 <p align="center"><em>Figure 2.</em>  The content of the causal and non-causal subgraphs in the synthetic dataset.</p>
+
+<p align="center"><img src="image/data2.png" width=50% height=50%></p>
+<p align="center"><em>Figure 3.</em>  The detail of synthetic datasets.</p>
+
+<p align="center"><img src="image/data3.png" width=50% height=50%></p>
+<p align="center"><em>Figure 3.</em>  Real-world Dataset.</p>
+
 
 
 
